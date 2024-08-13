@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright 2020, Qian Han, JLL, list the default pii data information -->
+<datasets>
+	<dataset>
+		<table_name>em</table_name>
+		<field_name>net_user_name</field_name>
+		<restriction>em_id = 'CONOR.MAGILL'</restriction>
+		<is_key>false</is_key>
+		<algorithm>algorithm.stringAlgorithm.MaskExceptLastThreeChar</algorithm>
+		<enabled>true</enabled>
+	</dataset>
+	<dataset>
+		<table_name>em</table_name>
+		<field_name>name_last</field_name>
+		<restriction>em_id = 'CONOR.MAGILL'</restriction>
+		<is_key>false</is_key>
+		<algorithm>algorithm.stringAlgorithm.MaskLastFourChar</algorithm>
+		<enabled>true</enabled>
+	</dataset>
+	<dataset>
+		<table_name>em</table_name>
+		<field_name>em_id</field_name>
+		<restriction></restriction>
+		<is_key>true</is_key>
+		<algorithm>algorithm.stringAlgorithm.MaskLastFourChar</algorithm>
+		<enabled>false</enabled>
+	</dataset>
+</datasets>

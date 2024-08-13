@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright 2020, Qian Han, JLL, list the default pii data information -->
+<!-- table_name: database table name, required -->
+<!-- field_name: database column name, required -->
+<!-- restriction: where clause restriction on the table columns, not required -->
+<!-- is_key: true or false, required, it tells the program if we need to do the cascade update. 
+	The users have to know if the given field_name is a key(primary key, foreign key, compound key) value or not.	-->
+<!-- algorithm: the algorithm we apply on the data pii value, required, it has to be the entire class path. -->
+<!-- enabled: true or false, required, it is a switch to define if we implement the algorithm on the table column or not. -->
+<datasets>
+	<dataset>
+		<table_name>bl</table_name>
+		<field_name>bl_id</field_name>
+		<restriction>bl_id = '060B'</restriction>
+		<is_key>true</is_key>
+		<algorithm>algorithm.stringAlgorithm.MaskExceptLastThreeChar</algorithm>
+		<enabled>true</enabled>
+	</dataset>
+</datasets>
